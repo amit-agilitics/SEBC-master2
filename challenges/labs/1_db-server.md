@@ -99,7 +99,7 @@ affiliates. Other names may be trademarks of their respective
 owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-`````
+
 mysql> show databases;
 +--------------------+
 | Database           |
@@ -116,3 +116,4 @@ mysql> show databases;
 | sentry             |
 +--------------------+
 10 rows in set (0.00 sec)
+``````
