@@ -77,16 +77,14 @@ sh clustercmd.sh ls /usr/share/java
 Hostname of DB Node
 ====================
 
-```
 [centos@ip-172-31-9-165 ~]$ hostname -f
 ip-172-31-9-165.ap-southeast-1.compute.internal
 [centos@ip-172-31-9-165 ~]$
-````
 
 
 Hostname of DB Version
 ====================
-````
+
 [centos@ip-172-31-9-165 ~]$ mysql --version
 mysql  Ver 14.14 Distrib 5.5.54, for Linux (x86_64) using readline 5.1
 
@@ -94,7 +92,6 @@ mysql  Ver 14.14 Distrib 5.5.54, for Linux (x86_64) using readline 5.1
 
 Database schema created
 ========================
-```
 Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
 
 Oracle is a registered trademark of Oracle Corporation and/or its
