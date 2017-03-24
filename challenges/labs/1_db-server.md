@@ -94,7 +94,7 @@ mysql  Ver 14.14 Distrib 5.5.54, for Linux (x86_64) using readline 5.1
 
 Database schema created
 ========================
-
+```
 Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
 
 Oracle is a registered trademark of Oracle Corporation and/or its
@@ -102,7 +102,7 @@ affiliates. Other names may be trademarks of their respective
 owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
+`````
 mysql> show databases;
 +--------------------+
 | Database           |
