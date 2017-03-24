@@ -1,16 +1,18 @@
 
-Provider
-
 `````
+Provider
+=========
 Amazon Webservices
 
 
 
 OS types
+========
 
 CENT OS 7
 
 Servers
+========
 
 172.31.9.165
 Connection to ec2-54-179-176-155.ap-southeast-1.compute.amazonaws.com closed.
@@ -26,7 +28,7 @@ Ajits-MacBook-Air:Downloads ajitkumaramit$
 
 
 free space
-
+=============
 
 
 Ajits-MacBook-Air:Downloads ajitkumaramit$ sh clustercmd.sh df -h
@@ -84,7 +86,7 @@ Ajits-MacBook-Air:Downloads ajitkumaramit$
 
 
 repository enabled
-
+====================
 
 Ajits-MacBook-Air:Downloads ajitkumaramit$ sh clustercmd.sh ls /etc/yum.repos.d/
 CentOS-Base.repo  CentOS-Debuginfo.repo  CentOS-Sources.repo  CentOS-fasttrack.repo
@@ -111,7 +113,7 @@ Ajits-MacBook-Air:Downloads ajitkumaramit$
 
 
 CENT OS Linux Versions
-
+===========================
 
 Ajits-MacBook-Air:Downloads ajitkumaramit$ sh clustercmd.sh sudo hostnamectl
    Static hostname: ip-172-31-9-165.ap-southeast-1.compute.internal
@@ -180,7 +182,7 @@ Transient hostname: ip-172-31-9-167
 Connection to ec2-52-221-196-174.ap-southeast-1.compute.amazonaws.com closed.
 `````
 Disk capacity
-
+================
 ````
 
 Ajits-MacBook-Air:Downloads ajitkumaramit$ sh clustercmd.sh df -h
@@ -232,7 +234,7 @@ Connection to ec2-52-221-196-174.ap-southeast-1.compute.amazonaws.com closed.
 Ajits-MacBook-Air:Downloads ajitkumaramit$ 
 ````
 List the /etc/passwd entries for berkeley and stanford
-
+=========================================================
 getent passwd  berkeley
 
 `````
@@ -248,7 +250,8 @@ berkeley:x:2040:2040::/home/berkeley:/bin/bash
 Connection to ec2-52-221-196-174.ap-southeast-1.compute.amazonaws.com closed.
 Ajits-MacBook-Air:Downloads ajitkumaramit$ 
 
- or directory
+getent passwd stanford
+
 stanford:x:2420:2420::/home/stanford:/bin/bash
 Connection to ec2-54-179-176-155.ap-southeast-1.compute.amazonaws.com closed.
 stanford:x:2420:2420::/home/stanford:/bin/bash
@@ -266,6 +269,7 @@ Ajits-MacBook-Air:Downloads ajitkumaramit$
 List the /etc/group entries for cardinal and bruins
 
  getent group cardinal
+ =======================
 
 ````
 
@@ -280,6 +284,10 @@ Connection to ec2-54-169-128-206.ap-southeast-1.compute.amazonaws.com closed.
 cardinal:x:2421:stanford
 Connection to ec2-52-221-196-174.ap-southeast-1.compute.amazonaws.com closed.
 Ajits-MacBook-Air:Downloads ajitkumaramit$ 
+
+
+getent group bruins
+======================
 
 Ajits-MacBook-Air:Downloads ajitkumaramit$ sh clustercmd.sh getent group bruins
 bruins:x:2422:berkeley
