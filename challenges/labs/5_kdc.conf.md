@@ -18,7 +18,9 @@ AMIT-AGILITICS.HQ= {
 
  [centos@ip-172-31-2-214 krb5kdc]$ sudo cat  kadm5.acl
 */admin@AMIT-AGILITICS.HQ	*
+```
+I don't love this usage of the ACL file. You're granting full permissions to anything with `/admin` in their principal name.
+```
 cloudera-scm@AMIT-AGILITICS.HQ *
 [centos@ip-172-31-2-214 krb5kdc]$
-
 ```
