@@ -1,6 +1,6 @@
 
 
-
+```
 [libdefaults]
  default_realm = AMIT-AGILITICS.HQ
  dns_lookup_realm = false
@@ -18,4 +18,4 @@ AMIT-AGILITICS.HQ= {
   kdc = ip-172-31-2-214.ap-southeast-1.compute.internal
   admin_server = ip-172-31-2-214.ap-southeast-1.compute.internal
  }
-
+```
