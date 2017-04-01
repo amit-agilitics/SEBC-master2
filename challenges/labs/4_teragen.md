@@ -3,13 +3,16 @@
 Teragen Output with command and time
 ===========================
 
-``````````````
+```
 [centos@ip-172-31-0-59 ~]$ su berkeley
 Password:
 su: Authentication failure
 [centos@ip-172-31-0-59 ~]$ su berkeley
 Password:
 [berkeley@ip-172-31-0-59 centos]$ time hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar teragen -Dmapred.map.tasks=12 -Ddfs.block.size=536870912  65536000 /user/berkeley/tgen
+```
+##### Your block size was supposed to be 64 MB, according to the instructions. The task container size was supposed to be 512 MiB
+```
 17/03/24 19:08:45 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-0-59.ap-southeast-1.compute.internal/172.31.0.59:8032
 17/03/24 19:08:45 INFO terasort.TeraGen: Generating 65536000 using 12
 17/03/24 19:08:45 INFO mapreduce.JobSubmitter: number of splits:12
@@ -105,14 +108,12 @@ Password:
 real	1m24.454s
 user	0m7.946s
 sys	0m0.345s
-```````````````````````````
-
+```
 
 Tersort Output with command and time
 ======================================
 
-
-``````````````````
+```
 [berkeley@ip-172-31-0-59 centos]$ time hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar terasort  /user/berkeley/tgen /user/berkeley/sortedoutput
 17/03/24 19:11:20 INFO terasort.TeraSort: starting
 17/03/24 19:11:22 INFO input.FileInputFormat: Total input paths to process : 12
@@ -236,7 +237,7 @@ sys	0m0.350s
 The command and output of hdfs dfs -ls /user/berkeley/tgen
 ===========================================================
 
-``````
+```
 [berkeley@ip-172-31-0-59 centos]$ hdfs dfs -ls /user/berkeley/tgen
 Found 13 items
 -rw-r--r--   3 berkeley supergroup          0 2017-03-24 19:10 /user/berkeley/tgen/_SUCCESS
@@ -253,9 +254,7 @@ Found 13 items
 -rw-r--r--   3 berkeley supergroup  546133300 2017-03-24 19:10 /user/berkeley/tgen/part-m-00010
 -rw-r--r--   3 berkeley supergroup  546133300 2017-03-24 19:10 /user/berkeley/tgen/part-m-00011
 [berkeley@ip-172-31-0-59 centos]$
-```````
-
-
+```
 
 The command and output to show how many blocks are stored under this directory
 ================================================================================
@@ -269,6 +268,9 @@ FSCK started by berkeley (auth:SIMPLE) from /172.31.0.59 for path /user/berkeley
  Total files:	13
  Total symlinks:		0
  Total blocks (validated):	24 (avg. block size 273066666 B)
+ ```
+#### Your average block size is ~270 MiB, despite the setting you gave. This kind of thing is worth noticing as a sanity check. It could have made you wonder why it was so far off from what you specified. I am thinking 24 blocks for ~6 GB of data should have made you wonder.
+ ```
  Minimally replicated blocks:	24 (100.0 %)
  Over-replicated blocks:	0 (0.0 %)
  Under-replicated blocks:	0 (0.0 %)
