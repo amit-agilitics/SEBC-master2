@@ -3,7 +3,7 @@ List the command and output for ls /etc/yum.repos.d
 
 ``````````````
 Ajits-MacBook-Air:Downloads ajitkumaramit$ sh clustercmd.sh ls /etc/yum.repos.d
-]CentOS-Base.repo       CentOS-Media.repo    CentOS-fasttrack.repo	 mysql-community.repo
+]CentOS-Base.repo       CentOS-Media.repo    CentOS-fasttrack.repo	 mysql-community.repo <-- how does a '[' get into machine output?
 CentOS-CR.repo	       CentOS-Sources.repo  cloudera-manager.repo
 CentOS-Debuginfo.repo  CentOS-Vault.repo    mysql-community-source.repo
 Connection to ec2-54-179-176-155.ap-southeast-1.compute.amazonaws.com closed.
