@@ -4,13 +4,13 @@ The command and output for hdfs dfs -ls /user
 ```````
 [centos@ip-172-31-0-59 ~]$ hdfs dfs -ls /user
 Found 7 items
-drwxr-xr-x   - hdfs   supergroup          0 2017-03-24 18:50 /user/berkeley
+drwxr-xr-x   - hdfs   supergroup          0 2017-03-24 18:50 /user/berkeley  <-- permissions
 drwxr-xr-x   - hdfs   supergroup          0 2017-03-24 18:50 /user/hdfs
 drwxrwxrwx   - mapred hadoop              0 2017-03-24 18:48 /user/history
 drwxrwxr-t   - hive   hive                0 2017-03-24 18:49 /user/hive
 drwxrwxr-x   - hue    hue                 0 2017-03-24 18:49 /user/hue
 drwxrwxr-x   - oozie  oozie               0 2017-03-24 18:49 /user/oozie
-drwxr-xr-x   - hdfs   supergroup          0 2017-03-24 18:51 /user/stanford
+drwxr-xr-x   - hdfs   supergroup          0 2017-03-24 18:51 /user/stanford  <-- permissions
 [centos@ip-172-31-0-59 ~]$
 ````````
 
@@ -92,4 +92,4 @@ Server: Jetty(6.1.26.cloudera.4)
     "numPhysicalCores" : 2,
     "totalPhysMemBytes" : 15332438016
   } ]
-```````````````
+``````````````` <--- this won't do anything in Markdown, by the way. It reads for three ` once only at the beginning of a line.
